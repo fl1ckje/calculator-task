@@ -70,11 +70,9 @@ class Calculator {
 
     private int operate(int operand1, int operand2, Operator operator) throws Exception {
         // проверка значений операндов на попадание в заданный диапазон
-        int MAX_VALUE = 10;
-        int MIN_VALUE = 1;
 
-        if (operand1 < MIN_VALUE || operand1 > MAX_VALUE ||
-                operand2 < MIN_VALUE || operand2 > MAX_VALUE) {
+        if (operand1 < 1 || operand1 > 10 ||
+                operand2 < 1 || operand2 > 10) {
             throw new Exception("значения операндов не могут быть меньше 1 или больше 10");
         }
 
